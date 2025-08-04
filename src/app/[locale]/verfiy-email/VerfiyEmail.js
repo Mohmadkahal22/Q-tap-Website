@@ -46,16 +46,18 @@ export const VerfiyEmail = () => {
             }
             const response = await axios.request(options)
                 .then(res => res)
-                .catch(error => 
-            
+                .catch(error => {
+                    if (response?.data?.status == true) {
+                        toast.success("success sign up");
 
-            if (response?.data?.status == true) {
-                toast.success("success sign up");
+                        router.push(`/${locale}/marketing`)
+                    } else {
+                        toast.error("otp is invalid");
+                    }
+                })
 
-                router.push(`/${locale}/marketing`)
-            } else {
-                toast.error("otp is invalid");
-            }
+
+
         } catch (error) {
             toast.error(error.response?.data?.message || "faild to send otp");
         }
