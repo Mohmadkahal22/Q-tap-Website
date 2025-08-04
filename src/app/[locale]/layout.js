@@ -23,7 +23,7 @@ export const metadata = {
   title: "Qtap",
   description: `Tap, Order, Pay and Eat Create a Smart menu suitable for any type of business. Engage more with your customers.`,
   icons: {
-     icon: [
+    icon: [
       { url: "/images/qtaptap.png", sizes: "32x32" }
 
     ],

@@ -11,6 +11,7 @@ import { useLocale } from 'next-intl';
 import useUserStore from '@/store/userStore';
 import { logout } from '@/api/logout';
 import { LogIn, LogOut } from 'lucide-react';
+import { CURRENT_URL, DASHBOARD_URL } from '@/utils/constants';
 
 export const Admin = () => {
     const router = useRouter();
@@ -192,7 +193,7 @@ export const Admin = () => {
                                 <Typography
                                     sx={{ color: "white", fontSize: "10px", textTransform: "capitalize", cursor: "pointer" }}
                                     onClick={() => {
-                                        window.location.href = "https://dashboard.qutap.co"
+                                        window.location.href = DASHBOARD_URL
                                     }}
                                 >
                                     Dashboard
@@ -200,8 +201,7 @@ export const Admin = () => {
                             </Box>
                             <Typography
                                 onClick={() => {
-                                    window.location.href = `https://dashboard.qutap.co/test-web-login?token=${localStorage.getItem("token")}`;
-                                    // window.location.href = `https://dashboard.qutap.co/setting-client?redirectBack=${encodeURIComponent(`https://qutap.co/en?token=${localStorage.getItem("token")}`)}`;
+                                    window.location.href = `${DASHBOARD_URL}test-web-login?token=${localStorage.getItem("token")}`;
                                 }}
                             >
                                 <ListItem sx={{ cursor: "pointer" }} >
@@ -268,7 +268,7 @@ export const Admin = () => {
                             <div>
                                 <Typography
                                     onClick={() => {
-                                        window.location.href = "https://dashboard.qutap.co?redirectBack=https://qutap.co/en"
+                                        window.location.href = `${DASHBOARD_URL}?redirectBack=${CURRENT_URL}`
                                     }}
                                     style={{ textDecoration: "none" }}>
                                     <ListItem sx={{ cursor: "pointer" }} >
@@ -290,7 +290,7 @@ export const Admin = () => {
                                 </Typography>
                                 <Typography
                                     onClick={() => {
-                                        window.location.href = "https://dashboard.qutap.co?redirectBack=https://qutap.co/en"
+                                        window.location.href = `${DASHBOARD_URL}?redirectBack=${CURRENT_URL}`
                                     }}
                                     style={{ textDecoration: "none" }}>
                                     <ListItem sx={{ cursor: "pointer" }} >

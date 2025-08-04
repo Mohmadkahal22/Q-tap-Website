@@ -1,10 +1,25 @@
-export const BASE_URL = 'http://127.0.0.1:8000/api/'
-export const BASE_URL_IMAGE = 'http://127.0.0.1:8000/'
-// export const BASE_URL = 'https://api.qutap.co/api/'
-// export const BASE_URL_IMAGE = 'https://api.qutap.co/'
-// export const BASE_URL = 'https://highleveltecknology.com/Qtap/api/'
-// export const BASE_URL_IMAGE = 'https://highleveltecknology.com/Qtap/public/'
-export const DASHBOARD_URL = "https://dashboard.qutap.co/"
+// export const BASE_URL = 'http://159.198.77.150:8080/api/'
+// export const BASE_URL_IMAGE = 'http://159.198.77.150:8080/'
+// export const DASHBOARD_URL = "http://159.198.77.150:8081/dashboard/"
+// export const CURRENT_URL = 'http://159.198.77.150/'
+export const BASE_URL = typeof window !== "undefined"
+        ? window._env_?.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_BASE_URL
+        : process.env.NEXT_PUBLIC_BASE_URL;
+
+
+export const BASE_URL_IMAGE =
+    typeof window !== "undefined"
+        ? window._env_?.BASE_URL_IMAGE || process.env.NEXT_PUBLIC_BASE_URL_IMAGE
+        : process.env.NEXT_PUBLIC_BASE_URL_IMAGE;
+
+export const DASHBOARD_URL = typeof window !== "undefined"
+        ? window._env_?.NEXT_PUBLIC_DASHBOARD_URL || process.env.NEXT_PUBLIC_DASHBOARD_URL
+        : process.env.NEXT_PUBLIC_DASHBOARD_URL;
+
+
+export const CURRENT_URL = typeof window !== "undefined"
+        ? window._env_?.NEXT_PUBLIC_CURRENT_URL || process.env.NEXT_PUBLIC_CURRENT_URL
+        : process.env.NEXT_PUBLIC_CURRENT_URL;
 
 export const egyptCities = [
     { name: "Cairo", region: "Nile Valley & Delta" },

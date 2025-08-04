@@ -43,7 +43,7 @@ const FormFields = ({ onStartChat }) => {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    withCredentials: true, // equivalent to fetch's credentials: 'include'
+                    // withCredentials: true, // equivalent to fetch's credentials: 'include'
                 }
             );
 

@@ -3,9 +3,10 @@ import React from 'react';
 import { QRCode } from 'react-qr-code';
 import { Box, Typography, Button } from '@mui/material';
 import { useTranslations } from 'next-intl';
+import { CURRENT_URL } from '@/utils/constants';
 
 const QRCodeComponent = () => {
-    const qrCodeText = 'https://highleveltecknology.com/';
+    const qrCodeText = CURRENT_URL;
     const t = useTranslations();
     const handleCopyToClipboard = () => {
         navigator.clipboard.writeText(qrCodeText).then(() => {
