@@ -22,63 +22,7 @@ export const Admin = () => {
 
     // const [isLoggedIn, setIsLoggedIn] = useState(null);
     const { user, setUser, clearUser } = useUserStore();
-    const [userData, setUserData] = useState({
-        name: '',
-        email: ''
-    });
 
-    useEffect(() => {
-        if (!!user) {
-            setUserData({
-                name: user?.name,
-                email: user?.email
-            });
-        }
-    }, [user])
-
-    // useEffect(() => {
-    //     const storedToken = localStorage.getItem('token');
-    //     const storedName = localStorage.getItem('userName');
-    //     const storedEmail = localStorage.getItem('userEmail');
-
-    //     // فقط نفذ العملية إذا كانت القيم غير موجودة
-    //     if (!storedToken || !storedName || !storedEmail) {
-    //         const urlParams = new URLSearchParams(window.location.search);
-    //         const token = urlParams.get('token');
-    //         const name = urlParams.get('name');
-    //         const email = urlParams.get('email');
-
-    //         if (token) {
-    //             localStorage.setItem('token', token);
-    //             
-    //         }
-
-    //         if (name) {
-    //             localStorage.setItem('userName', name);
-    //             
-    //         }
-
-    //         if (email) {
-    //             localStorage.setItem('userEmail', email);
-    //             
-    //         }
-    //     } else {
-    //         
-    //     }
-    // }, []);
-
-    // const currentToken = localStorage.getItem('token');
-    // useEffect(() => {
-    //     // This code runs only on the client side
-    //     setUserData({
-    //         name: localStorage.getItem("userName") || '',
-    //         email: localStorage.getItem("userEmail") || ''
-    //     });
-    // }, []);
-    // useEffect(() => {
-    //     // This will only run on the client side
-    //     setIsLoggedIn(localStorage.getItem("token"));
-    // }, []);
 
     const handleUserClick = (event) => {
         setAnchorElUser(event.currentTarget);
@@ -88,15 +32,6 @@ export const Admin = () => {
         setAnchorElUser(null);
     };
 
-    // const handleLogoutClick = () => {
-    //     // Remove from localStorage
-    //     localStorage.removeItem('token');
-    //     localStorage.removeItem('userName');
-    //     localStorage.removeItem('userEmail');
-    //     setIsLoggedIn(null);
-    //     handleUserClose();
-
-    // };
     const [loading,setLoading] = useState()
     const handleLogoutClick = async () => {
         if (loading) return;
@@ -264,11 +199,10 @@ export const Admin = () => {
                                 />
                             </ListItem>
                         ) : (
-                            /* user dont login */
                             <div>
                                 <Typography
                                     onClick={() => {
-                                        window.location.href = `${DASHBOARD_URL}?redirectBack=${CURRENT_URL}`
+                                        window.location.href = `${DASHBOARD_URL}?redirectBack=${CURRENT_URL}&&signUp=true`
                                     }}
                                     style={{ textDecoration: "none" }}>
                                     <ListItem sx={{ cursor: "pointer" }} >

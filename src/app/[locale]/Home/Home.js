@@ -56,8 +56,8 @@ const Home = () => {
                         {t("homePage.about")}</Typography>
                     <Link href="/mobileList">
                         <Button className="joinButton" sx={{ marginTop: "60px", alignItems: "center" }}>
-                            <img src="/assets/plus.svg" alt='plus'
-                                style={{ width: "18px", height: "18px", marginRight: "5px", }} />
+                            {/* <img src="/assets/plus.svg" alt='plus'
+                                style={{ width: "18px", height: "18px", marginRight: "5px", }} /> */}
                             <span className='fw-600'> {t("homePage.joinNow")} </span>
                         </Button>
                     </Link>
