@@ -46,7 +46,8 @@ const page = () => {
     const router = useRouter()
 
 
-    const { data: shops,error } = useShops()
+    const { data: shops, error } = useShops()
+    console.log(shops   )
     const [selectedOption, setSelectedOption] = useState('dine_in');
     const [branchServigWay, setBranchServingWary] = useState([])
 
@@ -66,13 +67,14 @@ const page = () => {
             setSelectedOption(branch?.serving_ways?.[0]?.name)
         } else {
             const dineIn = branch?.serving_ways?.find(item => item.name === "dine_in")
+            console.log(branch)
             if (dineIn) {
                 setBranchServingWary([dineIn])
                 setSelectedOption(dineIn?.name)
             }
 
         }
-      
+
         // serving_ways
         /* 0
         : 
@@ -216,8 +218,8 @@ const page = () => {
     }
     // =========================================================================
 
-    if(error) {
-        return ( <div> error {error} </div> )
+    if (error) {
+        return (<div> error {error} </div>)
     }
 
     return (
