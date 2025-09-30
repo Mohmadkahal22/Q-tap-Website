@@ -15,7 +15,7 @@ export function useGetAuthUser() {
 
   useEffect(() => {
     if (query.isSuccess && query.data) {
-      console.log("data from get user Query", query.data?.user);
+      console.log("data from get user Query", query.data);
       setUser(query.data?.user);
     }
 
