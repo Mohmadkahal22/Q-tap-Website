@@ -182,7 +182,12 @@ const page = ({ params }) => {
 
       if (meal) {
         addItemToCart(meal);
-        router.replace(`/cart?shopId=${shopId}&branchId=${branchId}`);
+        const params = new URLSearchParams(searchParams.toString());
+
+        // build new URL
+        const catIdUrl = `/cart?${params.toString()}`;
+
+        router.replace(catIdUrl);
       } else {
         toast.error("something went wrong refresh and try again");
       }
