@@ -29,6 +29,7 @@ import { useShops } from "@/hooks/useShops";
 import { apiCheckDiscountCode } from "@/api/checkDiscountCode";
 import { egyptCities } from "@/utils/constants";
 import { useCartStore } from "@/store/cartStore";
+import { useGetTablesByBranchID } from "@/hooks/useGetTablesByBranchID";
 
 const options = [
   {
@@ -72,6 +73,9 @@ const page = () => {
   const shopId = searchParams.get("shopId");
   const branchId = searchParams.get("branchId");
   const tableId = searchParams.get("tableId");
+
+  const { data } = useGetTablesByBranchID(branchId);
+  console.log(data?.tables);
   useEffect(() => {
     // const storedCartItems = getCartItems();
 
@@ -260,8 +264,8 @@ const page = () => {
     const query = {};
     if (shopId) query.shopId = shopId;
     if (branchId) query.branchId = branchId;
-    if (tableId || selectedTable)
-      query.tableId = tableId ? tableId : selectedTable;
+    if (tableId) query.tableId = tableId;
+    if (selectedTable) query.selectedTable = selectedTable;
 
     // convert to query string
     const queryString =
@@ -536,14 +540,16 @@ const page = () => {
                     >
                       {t("selectTable")}
                     </MenuItem>
-                    {table?.map((item) => (
-                      <MenuItem
-                        value={2}
-                        sx={{ fontSize: "11px", color: "#797993" }}
-                      >
-                        {t("table")} {item}
-                      </MenuItem>
-                    ))}
+                    {Array.isArray(data?.tables) &&
+                      data?.tables?.map((item) => (
+                        <MenuItem
+                          key={item?.id}
+                          value={item?.id}
+                          sx={{ fontSize: "11px", color: "#797993" }}
+                        >
+                          {item?.name}
+                        </MenuItem>
+                      ))}
                   </Select>
                 </FormControl>
               </>
