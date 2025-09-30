@@ -22,10 +22,11 @@ import useUserStore from "@/store/userStore";
 
 const ChatBox = ({ onCloseChat }) => {
   const [inputValue, setInputValue] = useState("");
+  // DATA that create chat
   const { loggedData, chat_room_id } = useChatDataStore();
-
   const { user } = useUserStore();
-  const { data } = useGetChat(loggedData?.email);
+  // get chat if there is chat_room_id
+  const { data } = useGetChat(user ? user?.email : loggedData?.email);
 
   const { mutate: registerChat, isPending: isPendingRegisterChat } =
     useRegisterChat();
@@ -55,13 +56,13 @@ const ChatBox = ({ onCloseChat }) => {
     if (chat_room_id === null) {
       registerChat(
         {
-          email: user?.email || loggedData?.email,
-          name: user?.name || loggedData?.name,
+          email: user ? user?.email : loggedData?.email,
+          name: user ? user?.name : loggedData?.name,
           message: inputValue,
         },
         handleMutation((res) => {
           console.log(res);
-          setInputValue("")
+          setInputValue("");
         })
       );
     } else {
@@ -72,7 +73,7 @@ const ChatBox = ({ onCloseChat }) => {
         },
         handleMutation((res) => {
           console.log(res);
-          setInputValue("")
+          setInputValue("");
         })
       );
     }
@@ -133,9 +134,8 @@ const ChatBox = ({ onCloseChat }) => {
                 key={index}
                 style={{
                   display: "flex",
-                  justifyContent: (msg.type === "user"
-                    ? "flex-end"
-                    : "flex-start"), // Align user messages to the right
+                  justifyContent:
+                    msg.type === "user" ? "flex-end" : "flex-start", // Align user messages to the right
                   width: "100%", // Ensure the container takes full width
                 }}
               >
