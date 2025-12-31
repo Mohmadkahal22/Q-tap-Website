@@ -15,6 +15,7 @@
         "joinNow": "Join Now",
         "faildFetchFuature": "Failed to fetch feature data. Please try again.",
         "faildFetchClient": "Failed to fetch client data. Please try again.",
+        "failedFetchVideos": "Failed to fetch videos. Please try again.",
         "failedFetchPricing": "Failed to fetch pricing data. Please try again.",
         "ourFeatures": "Our Features",
         "whoWeServe": "Who We Serve",

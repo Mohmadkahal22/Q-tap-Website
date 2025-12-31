@@ -6,6 +6,10 @@ const withNextIntl = createNextIntlPlugin();  // or './i18n.ts'
 const nextConfig = {
   output: 'standalone',
   // other options
+  turbopack: {
+    // في بيئة ES Module لا يوجد __dirname، نستخدم process.cwd()
+    root: process.cwd()
+  }
 };
 
 export default withNextIntl(nextConfig);

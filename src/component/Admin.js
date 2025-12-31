@@ -134,11 +134,11 @@ export const Admin = () => {
                                     Dashboard
                                 </Typography>
                             </Box>
-                            <Typography
-                                onClick={() => {
-                                    window.location.href = `${DASHBOARD_URL}test-web-login?token=${localStorage.getItem("token")}`;
-                                }}
-                            >
+                                <Typography component="div"
+                                    onClick={() => {
+                                        window.location.href = `${DASHBOARD_URL}test-web-login?token=${localStorage.getItem("token")}`;
+                                    }}
+                                >
                                 <ListItem sx={{ cursor: "pointer" }} >
                                     <ListItemIcon sx={{ marginLeft: locale == 'ar' ? "-30px" : '0px' }}>
 
@@ -200,7 +200,7 @@ export const Admin = () => {
                             </ListItem>
                         ) : (
                             <div>
-                                <Typography
+                                <Typography component="div"
                                     onClick={() => {
                                         window.location.href = `${DASHBOARD_URL}?redirectBack=${CURRENT_URL}&&signUp=true`
                                     }}
@@ -222,7 +222,7 @@ export const Admin = () => {
                                         />
                                     </ListItem>
                                 </Typography>
-                                <Typography
+                                <Typography component="div"
                                     onClick={() => {
                                         window.location.href = `${DASHBOARD_URL}?redirectBack=${CURRENT_URL}`
                                     }}

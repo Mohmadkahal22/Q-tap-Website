@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import "/public/assets/icons/style.css";
 import HomeContextProvider from "./context/homeContext.js";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
@@ -24,7 +23,7 @@ export const metadata = {
   description: `Tap, Order, Pay and Eat Create a Smart menu suitable for any type of business. Engage more with your customers.`,
   icons: {
     icon: [
-      { url: "/images/qtaptap.png", sizes: "32x32" }
+      { url: "/images/qtaptap.PNG", sizes: "32x32" }
 
     ],
   }
@@ -42,6 +41,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <head>
+        <link rel="stylesheet" href="/assets/icons/style.css" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
