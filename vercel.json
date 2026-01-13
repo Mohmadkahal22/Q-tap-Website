@@ -1,16 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "installCommand": "npm ci --legacy-peer-deps --no-audit",
+  "installCommand": "npm install --force",
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "outputDirectory": ".next",
-  "env": {
-    "NODE_OPTIONS": "--max-old-space-size=4096"
-  }
+  "outputDirectory": ".next"
 }
