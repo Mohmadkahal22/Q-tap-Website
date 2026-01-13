@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:3001": "set PORT=3001 && next dev",
+    "dev:3001": "cross-env PORT=3001 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "npm install --legacy-peer-deps && next build"
+    "vercel-build": "npm ci --legacy-peer-deps && npm run build",
+    "postinstall": "npm dedupe"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -16,20 +17,21 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@mui/icons-material": "^6.1.8",
-    "@mui/material": "^6.1.8",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
     "@tanstack/react-query": "^5.76.1",
     "axios": "^1.7.9",
+    "cross-env": "^7.0.3",
     "gsap": "^3.12.5",
     "html2pdf.js": "^0.10.3",
     "leaflet": "^1.9.4",
-    "lottie-react": "^2.4.0",
+    "lottie-react": "^2.7.0",
     "lucide-react": "^0.514.0",
-    "next": "14.2.13",  
+    "next": "14.2.13",
     "next-intl": "^4.0.2",
     "pusher-js": "^8.4.0",
     "qrcode.react": "^4.0.1",
-    "react": "18.2.0", 
+    "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.5.2",
     "react-leaflet": "^4.2.1",
@@ -54,5 +56,9 @@
   "overrides": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
