@@ -1,0 +1,77 @@
+/* [project]/src/app/[locale]/Home/Home.css [app-client] (css) */
+.container {
+  z-index: 12;
+  background-image: url("/images/home.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vh;
+  height: 100vh;
+  position: relative;
+  padding: 0 !important;
+}
+
+.hero {
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  display: flex;
+  position: relative;
+  padding: 0 !important;
+}
+
+.joinButton {
+  cursor: pointer !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  background-color: #e57c00 !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 6px 40px !important;
+  font-size: 15px !important;
+}
+
+.joinButton:hover {
+  background-color: #dc8623 !important;
+  transition: transform .3s !important;
+  transform: scale(1.08) !important;
+}
+
+@media (max-width: 768px) {
+  .navbar, .navLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navLinks li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .heroContent {
+    font-size: 15px;
+  }
+
+  .joinButton {
+    width: 70%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 28px;
+  }
+
+  .heroContent p {
+    font-size: 12px;
+  }
+
+  .joinButton {
+    width: 50%;
+    padding: 8px 10px;
+  }
+}
+
+/*# sourceMappingURL=src_app_%5Blocale%5D_Home_Home_css_bad6b30c._.single.css.map*/

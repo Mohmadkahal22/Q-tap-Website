@@ -1,0 +1,158 @@
+/* [project]/src/app/[locale]/globals.css [app-client] (css) */
+:root {
+  --base-bg-color: #1d2029;
+  --base-text-color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  padding-right: 0 !important;
+  overflow-x: hidden !important;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.slick-track {
+  transition: transform .5s !important;
+}
+
+.slick-slide {
+  transition: all .5s !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.icon-image {
+  width: 35px;
+  height: 35px;
+}
+
+.typography-image .icon-image {
+  width: 180px;
+  height: 180px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #fff;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0 !important;
+}
+
+.noRightPadding {
+  padding-right: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  transition: transform .3s;
+  opacity: 1 !important;
+  background-color: #ccc !important;
+}
+
+.swiper-pagination-bullet-active {
+  margin-top: 10px;
+  transform: scale(1.8);
+  background-color: #e57c00 !important;
+}
+
+.swiper .swiper-pagination {
+  margin-top: 50px !important;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: -10px !important;
+}
+
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out;
+  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: inset 0 0 0 1000px #0000 !important;
+}
+
+input:-webkit-autofill:hover {
+  transition: background-color 5000s ease-in-out;
+  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: inset 0 0 0 1000px #0000 !important;
+}
+
+input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out;
+  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: inset 0 0 0 1000px #0000 !important;
+}
+
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out;
+  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: inset 0 0 0 1000px #0000 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
+}
+
+.my-base-button-style {
+  background-color: var(--base-text-color) !important;
+  color: var(--base-bg-color) !important;
+}
+
+.my-base-bg-color-Class {
+  background-color: var(--base-bg-color) !important;
+  color: var(--base-text-color) !important;
+}
+
+.my-margin-center-x {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gradient-icon-waiterCall {
+  background: linear-gradient(to right, gray 70%, #fff 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/*# sourceMappingURL=src_app_%5Blocale%5D_globals_css_bad6b30c._.single.css.map*/

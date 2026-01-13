@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/i18n/routing.js"],"sourcesContent":["import { defineRouting } from 'next-intl/routing';\r\n\r\nexport const routing = defineRouting({\r\n  // A list of all locales that are supported\r\n  locales: ['en', 'ar'],\r\n  defaultLocale: 'en',\r\n  localeDetection: false,\r\n  localePrefix: 'always' // <-- Important to enable redirect to /en\r\n});"],"names":[],"mappings":";;;;AAAA;;AAEO,MAAM,UAAU,IAAA,2PAAa,EAAC;IACnC,2CAA2C;IAC3C,SAAS;QAAC;QAAM;KAAK;IACrB,eAAe;IACf,iBAAiB;IACjB,cAAc,SAAS,0CAA0C;AACnE"}},
+    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.js"],"sourcesContent":["import createMiddleware from 'next-intl/middleware';\r\nimport {routing} from './src/i18n/routing';\r\n console.log('✅ middleware is running');\r\nexport default createMiddleware(routing);\r\n \r\nexport const config = {\r\n  // Match all pathnames except for\r\n  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`\r\n  // - … the ones containing a dot (e.g. `favicon.ico`)\r\n  matcher: '/((?!api|trpc|_next|_vercel|.*\\\\..*).*)'\r\n};"],"names":[],"mappings":";;;;;;AAAA;AACA;;;AACC,QAAQ,GAAG,CAAC;uCACE,IAAA,yMAAgB,EAAC,yIAAO;AAEhC,MAAM,SAAS;IACpB,iCAAiC;IACjC,iEAAiE;IACjE,qDAAqD;IACrD,SAAS;AACX"}}]
+}

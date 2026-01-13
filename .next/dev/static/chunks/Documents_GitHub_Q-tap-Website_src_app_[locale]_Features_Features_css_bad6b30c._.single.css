@@ -1,0 +1,29 @@
+/* [project]/Documents/GitHub/Q-tap-Website/src/app/[locale]/Features/Features.css [app-client] (css) */
+.slick-dots li button:before {
+  z-index: 20;
+  padding-top: 15px;
+  font-size: 8px;
+}
+
+.slick-dots li:hover button:before {
+  color: #e57c00;
+}
+
+.slick-dots .slick-active button:before {
+  z-index: 40px;
+  color: #e57c00 !important;
+}
+
+@media (max-width: 768px) {
+  .divider-media {
+    width: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .divider-media {
+    width: 30%;
+  }
+}
+
+/*# sourceMappingURL=Documents_GitHub_Q-tap-Website_src_app_%5Blocale%5D_Features_Features_css_bad6b30c._.single.css.map*/

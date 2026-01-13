@@ -1,0 +1,22 @@
+/* [project]/src/app/[locale]/VideoSlider/VideoSlider.css [app-client] (css) */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+  z-index: 44;
+  width: 25px;
+  height: 25px;
+  padding: 0 60px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 25px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/*# sourceMappingURL=src_app_%5Blocale%5D_VideoSlider_VideoSlider_css_bad6b30c._.single.css.map*/

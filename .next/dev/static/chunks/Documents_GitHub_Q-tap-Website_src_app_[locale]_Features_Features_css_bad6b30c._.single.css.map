@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Documents/GitHub/Q-tap-Website/src/app/[locale]/Features/Features.css"],"sourcesContent":[".slick-dots li button:before {\r\n    font-size: 8px;\r\n    z-index: 20;\r\n    padding-top: 15px;\r\n}\r\n\r\n.slick-dots li:hover button:before {\r\n    color: #E57C00;\r\n}\r\n\r\n.slick-dots .slick-active button:before {\r\n    color: #E57C00 !important;\r\n    z-index: 40px;\r\n}\r\n\r\n/* Media Queries */\r\n@media (max-width: 768px) {\r\n    .divider-media {\r\n        width: 20%;\r\n    }\r\n}\r\n\r\n@media (max-width: 480px) {\r\n    .divider-media {\r\n        width: 30%;\r\n    }\r\n}"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;AAIA;;;;;AAMA;EACI;;;;;AAKJ;EACI"}}]
+}

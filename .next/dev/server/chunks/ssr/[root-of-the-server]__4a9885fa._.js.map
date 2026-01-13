@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ASUSD/Documents/GitHub/Q-Tap-web/src/i18n/routing.js"],"sourcesContent":["import { defineRouting } from 'next-intl/routing';\r\n\r\nexport const routing = defineRouting({\r\n  // A list of all locales that are supported\r\n  locales: ['en', 'ar'],\r\n  defaultLocale: 'en',\r\n  localeDetection: false,\r\n  localePrefix: 'always' // <-- Important to enable redirect to /en\r\n});"],"names":[],"mappings":";;;;AAAA;;AAEO,MAAM,UAAU,IAAA,mPAAa,EAAC;IACnC,2CAA2C;IAC3C,SAAS;QAAC;QAAM;KAAK;IACrB,eAAe;IACf,iBAAiB;IACjB,cAAc,SAAS,0CAA0C;AACnE"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ASUSD/Documents/GitHub/Q-Tap-web/src/app/page.js"],"sourcesContent":["import { redirect } from \"next/navigation\";\r\nimport { routing } from \"@/i18n/routing\";\r\n\r\nexport default function RootPage() {\r\n  redirect(`/${routing.defaultLocale}`);\r\n}\r\n\r\n\r\n"],"names":[],"mappings":";;;;AAAA;AAAA;AACA;;;AAEe,SAAS;IACtB,IAAA,iMAAQ,EAAC,CAAC,CAAC,EAAE,iIAAO,CAAC,aAAa,EAAE;AACtC"}}]
+}
