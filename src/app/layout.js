@@ -1,9 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import HomeContextProvider from "./context/homeContext.js";
+import HomeContextProvider from "./[locale]/context/homeContext.js";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
-import PusherProvider from "./context/PusherProvider";
+import PusherProvider from "./[locale]/context/PusherProvider";
 import { ToastContainer } from "react-toastify";
 import ClientProviders from "@/component/ClientProviders/ClientProviders";
 
